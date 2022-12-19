@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br><h1>ADD NEW GCPD OFFICER | VIGILANTE</h1>
+
+<form action="/vigilantes" method="post">
+    <label for="name">NAME</label><br>
+    <input type="text" name="name" id="name"><br>
+    <label for="type">TYPE</label><br>
+    <input type="text" name="type" id="type"><br>
+    
+    <input type="submit" value="ADD OFFICER/VIGILANTE"><br>
+</form>
+
+{% endblock %}

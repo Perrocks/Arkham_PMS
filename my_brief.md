@@ -7,7 +7,7 @@ Name
 Date Of Birth (use a VARCHAR initially)
 Type of patient (human/non-human)
 Enhanced (true/false)
-Contact details for arresting vigilante/officer
+Details for arresting vigilante/officer
 Treatment notes
 Be able to assign patients to doctors
 CRUD actions for doctors / patients - remember the user - what would they want to see on each View? What Views should there be?

@@ -24,9 +24,14 @@ def delete_doctor(id):
     doctor_repository.delete(id)
     return redirect('/doctors')
 
-@doctors_blueprint.route("/patient",  methods=['POST'])
+@doctors_blueprint.route("/doctors",  methods=['POST'])
 def create_doctor():
     name = request.form['name']
     doctor = Doctor(name)
     doctor_repository.save(doctor)
     return redirect('/doctors')
+
+@doctors_blueprint.route("/doctors/new", methods=['GET'])
+def new_doctor():
+    doctors = doctor_repository.select_all()
+    return render_template("doctors/new.html", doctors = doctors)

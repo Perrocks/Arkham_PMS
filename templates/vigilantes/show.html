@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+<h1> {{vigilante.name}} </h1>
+
+<h3>Apprehended:</h3>
+
+<ul>
+    {% for patient in patients %}
+    <li>{{patient.alias}}</li>
+    {% endfor %}
+</ul>
+
+<form action="/vigilantes/{{vigilante.id}}/delete" method="POST">
+    <input type="submit" value="delete">
+</form>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="index">
+  <br>
+  <h1>MEDICAL PROFESSIONALS</h1>
+
+  <table class="table">
+    <tr>
+      <th>NAME</th>
+    </tr>
+    {% for doctor in doctors %}
+    <tr>
+      <td><a href="/doctors/{{ doctor.id }}"> Dr.{{doctor.name}} </a></td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <p class="btn--wrapper">
+    <a class="btn btn--action" href="/doctors/new">ADD NEW DOCTOR</a>
+</div>
+{% endblock %}

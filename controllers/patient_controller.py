@@ -28,15 +28,17 @@ def create_patient():
     alias = request.form['alias']
     name = request.form['name']
     age = request.form['age']
-    enhanced = request.form['enhanced']
+    enhanced = True if 'enhanced' in request.form else False
+    
+    
     vigilante_id = request.form['vigilante_id']
     doctor_id = request.form['doctor_id']
     treatment_notes = request.form['treatment_notes']
 
-    assigned_doctor = doctor_repository.select(doctor_id)
-    arrested_by = vigilante_repository.select(vigilante_id)
+    doctor = doctor_repository.select(doctor_id)
+    vigilante = vigilante_repository.select(vigilante_id)
 
-    patient = Patient(alias, name, age, enhanced, arrested_by, assigned_doctor, treatment_notes )
+    patient = Patient(alias, name, age, enhanced, vigilante, doctor, treatment_notes )
 
     patient_repository.save(patient)
     return redirect('/patients')
@@ -46,3 +48,9 @@ def create_patient():
 def delete_patient(id):
     patient_repository.delete(id)
     return redirect('/patients')
+
+@patients_blueprint.route("/patients/<id>")
+def show(id):
+    patient = patient_repository.select(id)
+    return render_template("patients/show.html", patient=patient)
+

@@ -13,14 +13,14 @@ CREATE TABLE doctors (
   name VARCHAR(255)
 );
 
-CREATE TABLE patient (
+CREATE TABLE patients (
   id SERIAL PRIMARY KEY,
   alias VARCHAR(255),
   name VARCHAR(255),
   age VARCHAR(255),
   enhanced BOOLEAN,
-  arrested_by VARCHAR(255),
-  assigned_doctor VARCHAR(255),
+  vigilante_id INT NOT NULL REFERENCES vigilantes(id) ON DELETE CASCADE,
+  doctor_id INT NOT NULL REFERENCES doctors(id) ON DELETE CASCADE,
   treatment_notes TEXT
 
 );

@@ -1,0 +1,34 @@
+body {
+    background: url('/static/image/background.jpeg');
+    background-size: cover;
+    background-repeat: repeat;
+    color: whitesmoke;
+    font-family: "Play", sans-serif;
+
+  }
+
+.links > li > a{
+    color: greenyellow;
+    list-style: none;
+    text-decoration: none;
+}
+
+.links > li{
+    list-style: none;
+    float: left;
+    padding-left: 10rem;
+
+}
+
+.index{
+    text-align: center;
+}
+
+.table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.show {
+    text-align: center;
+}

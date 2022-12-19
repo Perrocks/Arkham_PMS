@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="index">
+    <br>
+    <h1>GCPD | VIGILANTES</h1>
+
+    <table class="table">
+        <tr>
+            <th>NAME</th>
+            <th></th>
+            <th>TYPE</th>
+        </tr>
+        {% for vigilante in vigilantes %}
+        <tr>
+            <td><a href="/vigilantes/{{ vigilante.id }}"> {{vigilante.name}} </a></td>
+            <td>|</td>
+            <td>{{ vigilante.type }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <p class="btn--wrapper">
+        <a class="btn btn--action" href="/vigilantes/new">ADD NEW GCPD OFFICER / VIGILANTE</a>
+</div>
+{% endblock %}

@@ -5,7 +5,7 @@ from models.patient import Patient
 
 # Save new doctor to the database
 def save(doctor):
-    sql = "INSERT INTO doctor(name) VALUES (%s) RETURNING id"
+    sql = "INSERT INTO doctors(name) VALUES (%s) RETURNING id"
     values = [doctor.name]
     results = run_sql( sql, values )
     doctor.id = results[0]['id']
@@ -36,3 +36,13 @@ def select(id):
     if result is not None:
         doctor = Doctor(result['name'], result['id'] )
     return doctor
+
+# Delete all from doctors table
+def delete_all():
+    sql = "DELETE FROM doctors"
+    run_sql(sql)
+
+def delete(id):
+    sql = "DELETE  FROM doctors WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)

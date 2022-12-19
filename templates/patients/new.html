@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br><h1>ADD NEW PATIENT</h1>
+
+<form action="/patient" method="post">
+    <label for="alias">ALIAS</label><br>
+    <input type="text" name="alias" id="alias"><br>
+    <label for="name">NAME</label><br>
+    <input type="text" name="name" id="name"><br>
+    <label for="age">AGE</label><br>
+    <input type="text" name="age" id="age"><br>
+
+    <label for="enhanced">ENHANCED:</label>
+    <input type="checkbox" id="enhanced" name="enhanced" unchecked><br>
+  
+
+    <label for="vigilante">APPREHENDED BY:</label><br>
+    <select name="vigilante_id" id="vigilante">
+        {% for vigilante in vigilantes %}
+        <option value="{{ vigilante.id }}">{{ vigilante.name }}</option>
+        {% endfor %}
+    </select><br>
+
+    <label for="doctor">TREATED BY:</label><br>
+    <select name="doctor_id" id="doctor">
+        {% for doctor in doctors %}
+        <option value="{{ doctor.id }}">{{ doctor.name }}</option>
+        {% endfor %}
+    </select><br>
+
+    <label for="treatment_notes">TREATMENT NOTES</label><br>
+    <textarea name="treatment_notes" id="treatment_notes" rows="2" cols="30"></textarea><br>
+    
+    <input type="submit" value="ADD PATIENT"><br>
+</form>
+
+{% endblock %}

@@ -4,10 +4,15 @@ from models.doctor import Doctor
 from models.patient import Patient
 from models.vigilante import Vigilante
 
+import repositories.vigilante_repository as vigilante_repository
+import repositories.doctor_repository as doctor_repository
+
 # Save new patient to the database
 def save(patient):
-    sql = "INSERT INTO patients(alias, name, age, enhanced, arrested_by, assigned_doctor, treatment_notes) VALUES (%s, %s, %s, %s, %s, %s) RETURNING id"
-    values = [patient.alias, patient.name, patient.age, patient.enhanced, patient.arrested_by, patient.assigned_doctor, patient.treatment_notes]
+    sql = "INSERT INTO patients(alias, name, age, enhanced, vigilante_id, doctor_id, treatment_notes) VALUES (%s, %s, %s, %s, %s, %s, %s) RETURNING id"
+    
+    values = [patient.alias, patient.name, patient.age, patient.enhanced, patient.vigilante.id, patient.doctor.id, patient.treatment_notes]
+    
     results = run_sql( sql, values )
     patient.id = results[0]['id']
     return patient
@@ -21,7 +26,11 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        patient = Patient(row['alias'], row['name'], row['age'], row['enhanced'], row['arrested_by'], row['assigned_doctor'], row['treatment_notes'], row['id'])
+        vigilante = vigilante_repository.select(row['vigilante_id'])
+        doctor = doctor_repository.select(row['doctor_id'])
+
+        patient = Patient(row['alias'], row['name'], row['age'], row['enhanced'], vigilante.name, doctor.name, row['treatment_notes'], row['id'])
+        
         patients.append(patient)
     return patients
 
@@ -32,8 +41,50 @@ def select(id):
 
     sql = "SELECT * FROM patients WHERE id = %s"
     values = [id]
-    result = run_sql(sql, values)[0]
+    results = run_sql(sql, values)
+    
+    if results:
+        result=results[0]
 
-    if result is not None:
-        patient = Patient(result['alias'], result['name'], result['age'], result['enhanced'], result['arrested_by'], result['assigned_doctor'], result['treatment_notes'], result['id'])
+        vigilante = vigilante_repository.select(result['vigilante_id'])
+        doctor = doctor_repository.select(result['doctor_id'])
+
+        patient = Patient(result['alias'], result['name'], result['age'], result['enhanced'], vigilante, doctor, result['treatment_notes'], result['id'])
     return patient
+
+# Delete all from patients table
+def delete_all():
+    sql = "DELETE  FROM patients"
+    run_sql(sql)
+
+def patients_by_vigilante(vigilante):
+    patients = []
+
+    sql = "SELECT * FROM patients WHERE vigilante_id = %s"
+    values = [vigilante.id]
+    results = run_sql(sql, values)
+    if results: 
+        for row in results:
+            doctor = doctor_repository.select(row['doctor_id'])
+            patient = Patient(row['alias'], row['name'], row['age'], row['enhanced'], vigilante, doctor, row['treatment_notes'], row['id'])
+            patients.append(patient)
+    return patients 
+
+def patients_by_doctor(doctor):
+    patients = []
+
+    sql = "SELECT * FROM patients WHERE doctor_id = %s"
+    values = [doctor.id]
+    results = run_sql(sql, values)
+    if results: 
+        for row in results:
+            vigilante = vigilante_repository.select(row['vigilante_id'])
+            patient = Patient(row['alias'], row['name'], row['age'], row['enhanced'], vigilante, doctor, row['treatment_notes'], row['id'])
+            patients.append(patient)
+    return patients
+
+def delete(id):
+    sql = "DELETE  FROM patients WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
+

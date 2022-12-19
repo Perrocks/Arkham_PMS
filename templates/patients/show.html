@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="show">
+    <br>
+    <h1>PATIENT DETAILS</h1>    
+    <p>Alias / Name: {{ patient.alias }} / {{ patient.name }} </p>
+    {% if patient.enhanced %} 
+        {# display a tick of some sort   #}
+
+    {% else %} 
+        {# display a cross of some sort  #}
+    {% endif %}
+    <p>Enhanced: {{patient.enhanced}}</p>
+    <p>Apprehended by: {{patient.vigilante.name}}</p>
+    <p>Treatment by: {{patient.doctor.name}}</p>
+    <p>Treatment notes: {{patient.treatment_notes}}</p>
+</div>
+
+<input type="submit" value="Update">
+
+<form action="/patients/{{patient.id}}/delete" method="POST">
+    <input type="submit" value="delete">
+</form>
+
+
+{% endblock %}

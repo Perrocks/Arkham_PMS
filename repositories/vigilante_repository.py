@@ -38,4 +38,13 @@ def select(id):
         vigilante = Vigilante(result['name'], result['type'], result['id'] )
     return vigilante
 
-    
+# Delete all from vigilantes table
+def delete_all():
+    sql = "DELETE FROM vigilantes"
+    run_sql(sql)
+
+def delete(id):
+    sql = "DELETE  FROM vigilantes WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
+
