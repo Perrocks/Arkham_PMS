@@ -1,20 +1,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<br><h1>EDIT PATIENT</h1>
+<div class="edit">
+<br>
+<h1>EDIT PATIENT</h1>
 
 <form action="/patients/{{patient.id}}" method="post">
     <label for="alias">ALIAS</label><br>
-    <input type="text" name="alias" id="alias" value="{{patient.alias}}"><br>
+    <input class = "input"  type="text" name="alias" id="alias" value="{{patient.alias}}" required><br>
 
     <label for="name">NAME</label><br>
-    <input type="text" name="name" id="name" value="{{patient.name}}"><br>
+    <input class = "input"  type="text" name="name" id="name" value="{{patient.name}}"required><br>
 
     <label for="age">AGE</label><br>
-    <input type="text" name="age" id="age" value="{{patient.age}}"><br>
+    <input class = "input"  type="text" name="age" id="age" value="{{patient.age}}"required><br>
 
     <label for="enhanced">ENHANCED:</label>
-    <input type="checkbox" id="enhanced" name="enhanced" value="{{patient.enhanced}}"><br>
+    <input type="checkbox" id="enhanced" name="enhanced" {% if patient.enhanced == True%} checked = True{%endif%}><br>
   
 
     <label for="vigilante">APPREHENDED BY:</label><br>
@@ -32,9 +34,9 @@
     </select><br>
 
     <label for="treatment_notes">TREATMENT NOTES</label><br>
-    <textarea name="treatment_notes" id="treatment_notes" rows="2" cols="30" value="{{patient.treatment_notes}}"></textarea><br>
-    
+
+    <textarea class = "input"  name="treatment_notes" id="treatment_notes" rows="5" cols="30" autofocus>{{patient.treatment_notes}}</textarea><br>
     <input class="button" type="submit" value="UPDATE PATIENT"><br>
 </form>
-
+</div>
 {% endblock %}

@@ -37,3 +37,7 @@ def create_vigilante():
 def new_vigilante():
     vigilantes = vigilante_repository.select_all()
     return render_template("vigilantes/new.html", vigilantes = vigilantes)
+
+@vigilantes_blueprint.route("/thebat", methods=['GET'])
+def the_bat():
+    return render_template("thebat.html")

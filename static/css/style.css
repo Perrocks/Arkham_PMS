@@ -4,6 +4,7 @@ body {
     background-repeat: repeat;
     color: rgb(176, 254, 60);;
     font-family: "Play", sans-serif;
+    
 
 
   }
@@ -75,4 +76,12 @@ a:visited{
 }
 a:hover{
     color: rgb(124, 179, 41);
+}
+
+.show_links{
+    text-decoration: none;
+}
+
+.edit {
+    text-align: center;
 }

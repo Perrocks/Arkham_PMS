@@ -2,19 +2,21 @@
 
 {% block content %}
 <div class="show">
-<br>
-<h1> {{vigilante.name}} </h1>
+    <br>
+    <h1> {{vigilante.name}} </h1>
 
-<h3>Apprehended:</h3>
+    <h3>Apprehended:</h3>
 
-<ul>
-    {% for patient in patients %}
-    <li>{{patient.alias}}</li>
-    {% endfor %}
-</ul>
+    <ul>
+        {% for patient in patients %}
 
-<form action="/vigilantes/{{vigilante.id}}/delete" method="POST">
-    <input class="button" type="submit" value="REMOVE OFFICER/VIGILANTE">
-</form>
+        <li><a class = show_links href="/patients/{{ patient.id }}"> {{patient.alias}} </a></li>
+
+        {% endfor %}
+    </ul>
+
+    <form action="/vigilantes/{{vigilante.id}}/delete" method="POST">
+        <input class="button" type="submit" value="REMOVE OFFICER/VIGILANTE">
+    </form>
 </div>
 {% endblock %}

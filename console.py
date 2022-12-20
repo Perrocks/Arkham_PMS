@@ -12,24 +12,24 @@ patient_repository.delete_all()
 vigilante_repository.delete_all()
 doctor_repository.delete_all()
 
-notes = " My most challenging patient at Arkham. The Joker's derangement defies easy class. His rapidly changing mood swings hint at borderline personality disorder, but he has no trace of associated identity problems. He also displays signs of deep narcissism, but nonetheless he has a well-developed sense of others, as his ability to manipulate everyone from orderlies to doctors in Arkham is extraordinarily well-developed; he also shows all the signs of a highly functioning sufferer of antisocial personality. At times I actually wonder if he is actually insane at all. Additional notes: His criminal record makes clear that he is an unrepentant homicidal maniac. He is extremely manipulative; the file detailing Harley Quinn's associations with him is fascinating reading. It's unfortunate I was not on staff at the time to witness his seduction of her firsthand. His past is unknown, and his answers to me about it are wildly inconsistent and frequently fantastical."
+notes = " MY MOST CHALLENGING PATIENT AT ARKHAM. THE JOKER'S DERANGEMENT DEFIES EASY CLASS. HIS RAPIDLY CHANGING MOOD SWINGS HINT AT BORDERLINE PERSONALITY DISORDER, BUT HE HAS NO TRACE OF ASSOCIATED IDENTITY PROBLEMS. HE ALSO DISPLAYS SIGNS OF DEEP NARCISSISM, BUT NONETHELESS HE HAS A WELL-DEVELOPED SENSE OF OTHERS, AS HIS ABILITY TO MANIPULATE EVERYONE FROM ORDERLIES TO DOCTORS IN ARKHAM IS EXTRAORDINARILY WELL-DEVELOPED; HE ALSO SHOWS ALL THE SIGNS OF A HIGHLY FUNCTIONING SUFFERER OF ANTISOCIAL PERSONALITY. AT TIMES I ACTUALLY WONDER IF HE IS ACTUALLY INSANE AT ALL. ADDITIONAL NOTES: HIS CRIMINAL RECORD MAKES CLEAR THAT HE IS AN UNREPENTANT HOMICIDAL MANIAC. HE IS EXTREMELY MANIPULATIVE; THE FILE DETAILING HARLEY QUINN'S ASSOCIATIONS WITH HIM IS FASCINATING READING. IT'S UNFORTUNATE I WAS NOT ON STAFF AT THE TIME TO WITNESS HIS SEDUCTION OF HER FIRSTHAND. HIS PAST IS UNKNOWN, AND HIS ANSWERS TO ME ABOUT IT ARE WILDLY INCONSISTENT AND FREQUENTLY FANTASTICAL."
 
-vigilante1 = Vigilante('Batman', 'Vigilante')
+vigilante1 = Vigilante('BATMAN', 'VIGILANTE')
 vigilante_repository.save(vigilante1)
 
-vigilante2 = Vigilante('James Gorden', 'GCPD')
+vigilante2 = Vigilante('JAMES GORDEN', 'GCPD')
 vigilante_repository.save(vigilante2)
 
-doctor1 = Doctor('Joan Leland')
+doctor1 = Doctor('JOAN LELAND')
 doctor_repository.save(doctor1)
 
-doctor2 = Doctor('Harleen Quinzel')
+doctor2 = Doctor('HARLEEN QUINZEL')
 doctor_repository.save(doctor2)
 
-patient1 = Patient('Joker', 'Unknown', 'Unknown', False, vigilante1, doctor2, notes)
+patient1 = Patient('JOKER', 'UNKNOWN', 'UNKNOWN', False, vigilante1, doctor2, notes)
 patient_repository.save(patient1)
 
-patient2 = Patient('Scarecrow', 'Jonathan Crane', '33', False, vigilante2, doctor1, 'asdafafaasd')
+patient2 = Patient('SCARECROW', 'JONATHAN CRANE', '33', False, vigilante2, doctor1, 'NOTES')
 patient_repository.save(patient2)
 
 

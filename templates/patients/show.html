@@ -11,8 +11,9 @@
     {% else %} 
         <p>Enhanced: No</p>
     {% endif %}
-    <p>Apprehended by: {{patient.vigilante.name}}</p>
-    <p>Treatment by: {{patient.doctor.name}}</p>
+    <p>Apprehended by: <a class = show_links href="/vigilantes/{{ patient.vigilante.id }}"> {{patient.vigilante.name}} </a></p>
+    
+    <p>Treatment by: <a class = show_links href="/doctors/{{ patient.doctor.id }}"> {{patient.doctor.name}} </a></p>
     <p>Treatment notes:</p>
     
     <p class = "notes">{{patient.treatment_notes}}</p>

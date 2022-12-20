@@ -1,0 +1,33 @@
+.input{
+    text-transform: uppercase;
+    border-color: rgb(185, 185, 185);
+    border-radius: 7px;
+    align-items: center;
+    width: 15rem;
+    height: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.non_text_input{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 7px;
+    align-items: center;
+    width: 15rem;
+    height: 2rem;
+}
+
+.checkbox{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.textarea{
+    text-transform: uppercase;
+    border-color: rgb(185, 185, 185);
+    border-radius: 7px;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}

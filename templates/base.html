@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/button.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/input.css') }}">
 
 </head>
 
@@ -28,11 +29,16 @@
             </ul>
         </nav>
         <section>
+    
             {% block content %}
 
             {% endblock%}
         </section>
     </main>
 </body>
-
+<footer>
+    <form action="/thebat" method="GET">
+        <input class="thebatbutton" type="submit" value="EMERGENCY USE ONLY">
+    </form>
+</footer>
 </html>

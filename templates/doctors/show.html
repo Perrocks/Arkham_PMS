@@ -9,7 +9,9 @@
 
 <ul>
     {% for patient in patients %}
-    <li>{{patient.alias}}</li>
+
+    <li><a class = show_links href="/patients/{{ patient.id }}"> {{patient.alias}} </a></li>
+
     {% endfor %}
 </ul>
 

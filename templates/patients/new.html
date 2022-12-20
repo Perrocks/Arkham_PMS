@@ -7,32 +7,34 @@
 
 <form action="/patient" method="post">
     <label for="alias">ALIAS</label><br>
-    <input type="text" name="alias" id="alias"><br>
+    <input class = "input" type="text" name="alias" id="alias" placeholder="ALIAS" required autofocus><br>
+
     <label for="name">NAME</label><br>
-    <input type="text" name="name" id="name"><br>
+    <input class = "input" type="text" name="name" id="name" placeholder="NAME" required><br>
+
     <label for="age">AGE</label><br>
-    <input type="text" name="age" id="age"><br>
+    <input class = "input" type="text" name="age" id="age" placeholder="AGE" required><br>
 
     <label for="enhanced">ENHANCED:</label>
-    <input type="checkbox" id="enhanced" name="enhanced" unchecked><br>
+    <input class = "checkbox" type="checkbox" id="enhanced" name="enhanced" unchecked><br>
   
 
     <label for="vigilante">APPREHENDED BY:</label><br>
-    <select name="vigilante_id" id="vigilante">
+    <select class = "non_text_input" name="vigilante_id" id="vigilante">
         {% for vigilante in vigilantes %}
         <option value="{{ vigilante.id }}">{{ vigilante.name }}</option>
         {% endfor %}
     </select><br>
 
     <label for="doctor">TREATED BY:</label><br>
-    <select name="doctor_id" id="doctor">
+    <select class = "non_text_input" name="doctor_id" id="doctor">
         {% for doctor in doctors %}
         <option value="{{ doctor.id }}">{{ doctor.name }}</option>
         {% endfor %}
     </select><br>
 
     <label for="treatment_notes">TREATMENT NOTES</label><br>
-    <textarea name="treatment_notes" id="treatment_notes" rows="2" cols="30"></textarea><br>
+    <textarea class = "textarea" name="treatment_notes" id="treatment_notes" rows="5" cols="30" placeholder="ENTER TREATMENT NOTES"></textarea><br>
     
     <input class="button" type="submit" value="ADD PATIENT"><br>
 </form>
