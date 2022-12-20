@@ -2,15 +2,17 @@ body {
     background: url('/static/image/background.jpeg');
     background-size: cover;
     background-repeat: repeat;
-    color: whitesmoke;
+    color: rgb(176, 254, 60);;
     font-family: "Play", sans-serif;
+
 
   }
 
 .links > li > a{
-    color: greenyellow;
+    color: rgb(176, 254, 60);
     list-style: none;
     text-decoration: none;
+    opacity: 75%;
 }
 
 .links > li{
@@ -18,6 +20,9 @@ body {
     float: left;
     padding-left: 10rem;
 
+}
+.links > li > a:hover{
+    color: rgb(124, 179, 41);
 }
 
 .index{
@@ -27,8 +32,47 @@ body {
 .table{
     margin-left: auto;
     margin-right: auto;
+    opacity: 100%;
+    
+}
+.table{
+    text-decoration: none;
+    text-decoration-line: none;
 }
 
 .show {
     text-align: center;
+}
+
+.show > ul{
+    list-style: none;
+    text-align: center;
+    padding-right: 2rem;
+}
+
+.new{
+    text-align: center;
+    padding: 3rem;
+}
+
+.notes {
+    display: flex;
+    justify-content: center;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+.names > a{
+    text-decoration: none;
+}
+
+a:link{
+    color: rgb(176, 254, 60);
+}
+
+a:visited{
+    color: rgb(176, 254, 60);
+}
+a:hover{
+    color: rgb(124, 179, 41);
 }

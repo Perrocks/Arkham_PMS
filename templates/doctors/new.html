@@ -1,13 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<br><h1>ADD NEW MEDICAL PROFESSIONAL</h1>
+<div class="new">
+<br>
+<h1>ADD NEW MEDICAL PROFESSIONAL</h1>
 
 <form action="/doctors" method="post">
     <label for="name">NAME</label><br>
     <input type="text" name="name" id="name"><br>
     
-    <input type="submit" value="ADD MEDICAL PROFESSIONAL"><br>
+    <input class="button" type="submit" value="ADD MEDICAL PROFESSIONAL"><br>
 </form>
-
+</div>
 {% endblock %}

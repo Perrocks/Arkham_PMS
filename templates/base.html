@@ -2,17 +2,18 @@
 <html>
 
 <head>
-    <title>ARKHAMASYLUM</title>
+    <title>A R K H A M</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/button.css') }}">
+
 </head>
 
 <body>
-    <main class="flex flex--row">
+    <main>
         <nav>
             <ul class="links">
                 <li>
@@ -26,7 +27,7 @@
                 </li>
             </ul>
         </nav>
-        <section id="content">
+        <section>
             {% block content %}
 
             {% endblock%}

@@ -88,3 +88,11 @@ def delete(id):
     values = [id]
     run_sql(sql, values)
 
+def update(patient):
+    sql = "UPDATE patients SET (alias, name, age, enhanced, vigilante_id, doctor_id, treatment_notes) =(%s, %s, %s, %s, %s, %s, %s) WHERE id = %s"
+
+    values = [patient.alias, patient.name, patient.age, patient.enhanced, patient.vigilante.id, patient.doctor.id, patient.treatment_notes, patient.id]
+    
+    run_sql( sql, values )
+ 
+

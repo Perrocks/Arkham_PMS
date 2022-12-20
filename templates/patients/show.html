@@ -5,23 +5,27 @@
     <br>
     <h1>PATIENT DETAILS</h1>    
     <p>Alias / Name: {{ patient.alias }} / {{ patient.name }} </p>
+    <p>Age: {{patient.age}}</p>
     {% if patient.enhanced %} 
-        {# display a tick of some sort   #}
-
+        <p>Enhanced: Yes</p>
     {% else %} 
-        {# display a cross of some sort  #}
+        <p>Enhanced: No</p>
     {% endif %}
-    <p>Enhanced: {{patient.enhanced}}</p>
     <p>Apprehended by: {{patient.vigilante.name}}</p>
     <p>Treatment by: {{patient.doctor.name}}</p>
-    <p>Treatment notes: {{patient.treatment_notes}}</p>
-</div>
+    <p>Treatment notes:</p>
+    
+    <p class = "notes">{{patient.treatment_notes}}</p>
+    
 
-<input type="submit" value="Update">
 
-<form action="/patients/{{patient.id}}/delete" method="POST">
-    <input type="submit" value="delete">
+<form action="/patients/{{patient.id}}/edit" method="GET">
+<input class="button" type="submit" value="UPDATE PATIENT">
 </form>
 
+<form action="/patients/{{patient.id}}/delete" method="POST">
+    <input class="button" type="submit" value="REMOVE PATIENT">
+</form>
+</div>
 
 {% endblock %}

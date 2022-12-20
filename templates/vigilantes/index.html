@@ -13,14 +13,17 @@
         </tr>
         {% for vigilante in vigilantes %}
         <tr>
-            <td><a href="/vigilantes/{{ vigilante.id }}"> {{vigilante.name}} </a></td>
+            <td class = "names"><a href="/vigilantes/{{ vigilante.id }}"> {{vigilante.name}} </a></td>
             <td>|</td>
             <td>{{ vigilante.type }}</td>
         </tr>
         {% endfor %}
     </table>
 
-    <p class="btn--wrapper">
-        <a class="btn btn--action" href="/vigilantes/new">ADD NEW GCPD OFFICER / VIGILANTE</a>
+    <p>
+    <form action="/vigilantes/new" method="GET">
+        <input class="button" type="submit" value="ADD NEW OFFICER/VIGILANTE">
+    </form>
+    </p>
 </div>
 {% endblock %}

@@ -13,14 +13,16 @@
         </tr>
         {% for patient in patients %}
         <tr>
-            <td><a href="/patients/{{ patient.id }}"> {{patient.alias}} </a></td>
+            <td class = "names"><a href="/patients/{{ patient.id }}"> {{patient.alias}} </a></td>
             <td>|</td>
             <td>{{ patient.name }}</td>
         </tr>
         {% endfor %}
     </table>
-    <p class="btn--wrapper">
-        <a class="btn btn--action" href="/patients/new">ADD NEW PATIENT</a>
+    <p>
+    <form action="/patients/new" method="GET">
+        <input class="button" type="submit" value="ADD NEW PATIENT">
+    </form>
     </p>
 </div>
 {% endblock %}

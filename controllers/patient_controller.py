@@ -54,3 +54,29 @@ def show(id):
     patient = patient_repository.select(id)
     return render_template("patients/show.html", patient=patient)
 
+@patients_blueprint.route("/patients/<id>/edit", methods=['GET'])
+def edit_patient(id):
+    patient = patient_repository.select(id)
+    doctors = doctor_repository.select_all()
+    vigilantes = vigilante_repository.select_all()
+    return render_template("patients/edit.html", patient = patient, doctors = doctors, vigilantes = vigilantes)
+
+@patients_blueprint.route("/patients/<id>", methods=['POST'])
+def update_patient(id):
+    alias = request.form['alias']
+    name = request.form['name']
+    age = request.form['age']
+    enhanced = True if 'enhanced' in request.form else False
+    
+    
+    vigilante_id = request.form['vigilante_id']
+    doctor_id = request.form['doctor_id']
+    treatment_notes = request.form['treatment_notes']
+
+    doctor = doctor_repository.select(doctor_id)
+    vigilante = vigilante_repository.select(vigilante_id)
+
+    patient = Patient(alias, name, age, enhanced, vigilante, doctor, treatment_notes, id)
+    
+    patient_repository.update(patient)
+    return redirect('/patients')

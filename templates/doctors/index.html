@@ -11,12 +11,15 @@
     </tr>
     {% for doctor in doctors %}
     <tr>
-      <td><a href="/doctors/{{ doctor.id }}"> Dr.{{doctor.name}} </a></td>
+      <td class = "names"><a href="/doctors/{{ doctor.id }}"> Dr.{{doctor.name}} </a></td>
     </tr>
     {% endfor %}
   </table>
 
-  <p class="btn--wrapper">
-    <a class="btn btn--action" href="/doctors/new">ADD NEW DOCTOR</a>
+  <p>
+  <form action="/doctors/new" method="GET">
+    <input class="button" type="submit" value="ADD NEW DOCTOR">
+  </form>
+  </p>
 </div>
 {% endblock %}

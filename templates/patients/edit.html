@@ -1,20 +1,20 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="new">
-<br>
-<h1>ADD NEW PATIENT</h1>
+<br><h1>EDIT PATIENT</h1>
 
-<form action="/patient" method="post">
+<form action="/patients/{{patient.id}}" method="post">
     <label for="alias">ALIAS</label><br>
-    <input type="text" name="alias" id="alias"><br>
+    <input type="text" name="alias" id="alias" value="{{patient.alias}}"><br>
+
     <label for="name">NAME</label><br>
-    <input type="text" name="name" id="name"><br>
+    <input type="text" name="name" id="name" value="{{patient.name}}"><br>
+
     <label for="age">AGE</label><br>
-    <input type="text" name="age" id="age"><br>
+    <input type="text" name="age" id="age" value="{{patient.age}}"><br>
 
     <label for="enhanced">ENHANCED:</label>
-    <input type="checkbox" id="enhanced" name="enhanced" unchecked><br>
+    <input type="checkbox" id="enhanced" name="enhanced" value="{{patient.enhanced}}"><br>
   
 
     <label for="vigilante">APPREHENDED BY:</label><br>
@@ -32,9 +32,9 @@
     </select><br>
 
     <label for="treatment_notes">TREATMENT NOTES</label><br>
-    <textarea name="treatment_notes" id="treatment_notes" rows="2" cols="30"></textarea><br>
+    <textarea name="treatment_notes" id="treatment_notes" rows="2" cols="30" value="{{patient.treatment_notes}}"></textarea><br>
     
-    <input class="button" type="submit" value="ADD PATIENT"><br>
+    <input class="button" type="submit" value="UPDATE PATIENT"><br>
 </form>
-</div>
+
 {% endblock %}
