@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-12-21T12:13:14.818Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" version="20.7.4" etag="3E2oaFn1SDLxv2dMCFQe" type="github">
+<mxfile host="app.diagrams.net" modified="2022-12-21T15:05:07.480Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" version="20.7.4" etag="om8FIY3r1Giq5zj-4H46" type="github">
   <diagram id="yAcLhanDVdrnNnhjpeA5" name="Page-1">
-    <mxGraphModel dx="4830" dy="1800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="5214" dy="1383" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -44,7 +44,7 @@
             <mxPoint x="-740" y="190" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="M96NEgAKH5dN4HArhEmM-10" value="&lt;span style=&quot;font-size: 20px;&quot;&gt;LIST OF DOCTORS&lt;br&gt;&lt;br&gt;ADD NEW DOCTOR&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+        <mxCell id="M96NEgAKH5dN4HArhEmM-10" value="&lt;span style=&quot;font-size: 20px;&quot;&gt;LIST OF DOCTORS&lt;br&gt;&lt;br&gt;[ADD NEW DOCTOR]&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="-610" y="40" width="440" height="300" as="geometry" />
         </mxCell>
         <mxCell id="M96NEgAKH5dN4HArhEmM-17" value="DOCTORS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
@@ -66,7 +66,7 @@
             <mxPoint x="1570" y="190" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="M96NEgAKH5dN4HArhEmM-20" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;LIST OF PATIENTS ALIASES AND NAMES&lt;br&gt;&lt;br&gt;ADD NEW PATIENT&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+        <mxCell id="M96NEgAKH5dN4HArhEmM-20" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;LIST OF PATIENTS ALIASES AND NAMES&lt;br&gt;&lt;br&gt;[ADD NEW PATIENT]&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="910" y="40" width="440" height="300" as="geometry" />
         </mxCell>
         <mxCell id="M96NEgAKH5dN4HArhEmM-22" value="DOCTORS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
@@ -81,7 +81,7 @@
         <mxCell id="M96NEgAKH5dN4HArhEmM-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=20;startArrow=none;" edge="1" parent="1" source="M96NEgAKH5dN4HArhEmM-93" target="M96NEgAKH5dN4HArhEmM-66">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="M96NEgAKH5dN4HArhEmM-25" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;SHOW PATIENT&lt;br&gt;ALIAS&lt;br&gt;NAME&lt;br&gt;AGE&lt;br&gt;VIGILANTE&lt;br&gt;DOCTOR&lt;br&gt;TREATMENT NOTES&lt;br&gt;&lt;br&gt;EDIT PATIENT&lt;br&gt;DELETE PATIENT&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+        <mxCell id="M96NEgAKH5dN4HArhEmM-25" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;SHOW PATIENT&lt;br&gt;ALIAS&lt;br&gt;NAME&lt;br&gt;AGE&lt;br&gt;VIGILANTE&lt;br&gt;DOCTOR&lt;br&gt;TREATMENT NOTES&lt;br&gt;&lt;br&gt;[EDIT PATIENT]&lt;br&gt;[DELETE PATIENT]&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="910" y="480" width="440" height="300" as="geometry" />
         </mxCell>
         <mxCell id="M96NEgAKH5dN4HArhEmM-27" value="DOCTORS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
@@ -96,7 +96,7 @@
         <mxCell id="M96NEgAKH5dN4HArhEmM-72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=20;startArrow=none;" edge="1" parent="1" source="M96NEgAKH5dN4HArhEmM-85" target="M96NEgAKH5dN4HArhEmM-71">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="M96NEgAKH5dN4HArhEmM-30" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;SHOW DOCTOR NAME&lt;br&gt;LIST OF ASSIGNED PATIENTS&lt;br&gt;&lt;br&gt;EDIT DOCTOR&lt;br&gt;DELETE DOCTOR&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+        <mxCell id="M96NEgAKH5dN4HArhEmM-30" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;SHOW DOCTOR NAME&lt;br&gt;LIST OF ASSIGNED PATIENTS&lt;br&gt;&lt;br&gt;[EDIT DOCTOR]&lt;br&gt;[DELETE DOCTOR]&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="-610" y="480" width="440" height="300" as="geometry" />
         </mxCell>
         <mxCell id="M96NEgAKH5dN4HArhEmM-31" value="DOCTORS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
@@ -116,7 +116,7 @@
         <mxCell id="M96NEgAKH5dN4HArhEmM-82" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=20;startArrow=none;" edge="1" parent="1" source="M96NEgAKH5dN4HArhEmM-87" target="M96NEgAKH5dN4HArhEmM-79">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="M96NEgAKH5dN4HArhEmM-34" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;LIST OF VIGILANTES NAMES&lt;br&gt;&lt;br&gt;ADD NEW VIGILANTE&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="M96NEgAKH5dN4HArhEmM-34" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;LIST OF VIGILANTES NAMES&lt;br&gt;&lt;br&gt;[ADD NEW VIGILANTE]&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="160" y="910" width="440" height="300" as="geometry" />
         </mxCell>
         <mxCell id="M96NEgAKH5dN4HArhEmM-37" value="DOCTORS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
@@ -131,7 +131,7 @@
         <mxCell id="M96NEgAKH5dN4HArhEmM-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=20;startArrow=none;" edge="1" parent="1" source="M96NEgAKH5dN4HArhEmM-89" target="M96NEgAKH5dN4HArhEmM-76">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="M96NEgAKH5dN4HArhEmM-40" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;SHOW VIGILANTE NAME&lt;br&gt;LIST OF ASSIGNED PATIENTS&lt;br&gt;&lt;br&gt;EDIT VIGILANTE&lt;br&gt;DELETE VIGILANTE&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="M96NEgAKH5dN4HArhEmM-40" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;SHOW VIGILANTE NAME&lt;br&gt;LIST OF ASSIGNED PATIENTS&lt;br&gt;&lt;br&gt;[EDIT VIGILANTE]&lt;br&gt;[DELETE VIGILANTE]&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="160" y="1340" width="440" height="300" as="geometry" />
         </mxCell>
         <mxCell id="M96NEgAKH5dN4HArhEmM-46" value="SELECT PATIENT" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#b85450;fillColor=#f8cecc;fontSize=20;" vertex="1" parent="1">
@@ -149,7 +149,7 @@
         <mxCell id="M96NEgAKH5dN4HArhEmM-51" value="PATIENTS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="-1060" y="10" width="200" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="M96NEgAKH5dN4HArhEmM-52" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;ADD NEW DOCTOR&lt;br&gt;&lt;br&gt;ADD NEW&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+        <mxCell id="M96NEgAKH5dN4HArhEmM-52" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;ADD NEW DOCTOR&lt;br&gt;&lt;br&gt;[ADD NEW]&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="-1380" y="40" width="440" height="300" as="geometry" />
         </mxCell>
         <mxCell id="M96NEgAKH5dN4HArhEmM-59" value="DOCTORS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
@@ -161,7 +161,7 @@
         <mxCell id="M96NEgAKH5dN4HArhEmM-61" value="PATIENTS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="1978" y="10" width="200" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="M96NEgAKH5dN4HArhEmM-62" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;ADD NEW PATIENT&lt;br&gt;ALIAS&lt;br&gt;NAME&lt;br&gt;AGE&lt;br&gt;VIGILANTE&lt;br&gt;DOCTOR&lt;br&gt;TREATMENT NOTES&lt;br&gt;&lt;br&gt;ADD NEW&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+        <mxCell id="M96NEgAKH5dN4HArhEmM-62" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;ADD NEW PATIENT&lt;br&gt;ALIAS&lt;br&gt;NAME&lt;br&gt;AGE&lt;br&gt;VIGILANTE&lt;br&gt;DOCTOR&lt;br&gt;TREATMENT NOTES&lt;br&gt;&lt;br&gt;[ADD NEW]&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="1658" y="40" width="440" height="300" as="geometry" />
         </mxCell>
         <mxCell id="M96NEgAKH5dN4HArhEmM-63" value="DOCTORS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
@@ -173,7 +173,7 @@
         <mxCell id="M96NEgAKH5dN4HArhEmM-65" value="PATIENTS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="1978" y="450" width="200" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="M96NEgAKH5dN4HArhEmM-66" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;EDIT PATIENT&lt;br&gt;ALIAS&lt;br&gt;NAME&lt;br&gt;AGE&lt;br&gt;VIGILANTE&lt;br&gt;DOCTOR&lt;br&gt;TREATMENT NOTES&lt;br&gt;&lt;br&gt;ADD NEW&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+        <mxCell id="M96NEgAKH5dN4HArhEmM-66" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;EDIT PATIENT&lt;br&gt;ALIAS&lt;br&gt;NAME&lt;br&gt;AGE&lt;br&gt;VIGILANTE&lt;br&gt;DOCTOR&lt;br&gt;TREATMENT NOTES&lt;br&gt;&lt;br&gt;[ADD NEW]&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="1658" y="480" width="440" height="300" as="geometry" />
         </mxCell>
         <mxCell id="M96NEgAKH5dN4HArhEmM-68" value="DOCTORS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
@@ -185,7 +185,7 @@
         <mxCell id="M96NEgAKH5dN4HArhEmM-70" value="PATIENTS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="-1060" y="450" width="200" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="M96NEgAKH5dN4HArhEmM-71" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;EDIT DOCTOR&lt;br&gt;&lt;br&gt;UPDATE&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+        <mxCell id="M96NEgAKH5dN4HArhEmM-71" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;EDIT DOCTOR&lt;br&gt;&lt;br&gt;[UPDATE]&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="-1380" y="480" width="440" height="300" as="geometry" />
         </mxCell>
         <mxCell id="M96NEgAKH5dN4HArhEmM-73" value="DOCTORS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
@@ -197,7 +197,7 @@
         <mxCell id="M96NEgAKH5dN4HArhEmM-75" value="PATIENTS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="1230" y="1310" width="200" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="M96NEgAKH5dN4HArhEmM-76" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;EDIT VIGILANTE&lt;br&gt;NAME&lt;br&gt;TYPE&lt;br&gt;&lt;br&gt;UPDATE&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="M96NEgAKH5dN4HArhEmM-76" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;EDIT VIGILANTE&lt;br&gt;NAME&lt;br&gt;TYPE&lt;br&gt;&lt;br&gt;[UPDATE]&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="910" y="1340" width="440" height="300" as="geometry" />
         </mxCell>
         <mxCell id="M96NEgAKH5dN4HArhEmM-78" value="DOCTORS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
@@ -209,7 +209,7 @@
         <mxCell id="M96NEgAKH5dN4HArhEmM-80" value="PATIENTS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="-280" y="1310" width="200" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="M96NEgAKH5dN4HArhEmM-81" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;ADD NEW VIGILANTE&lt;br&gt;NAME&lt;br&gt;TYPE&lt;br&gt;&lt;br&gt;ADD NEW&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="M96NEgAKH5dN4HArhEmM-81" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;ADD NEW VIGILANTE&lt;br&gt;NAME&lt;br&gt;TYPE&lt;br&gt;&lt;br&gt;[ADD NEW]&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="-600" y="1340" width="440" height="300" as="geometry" />
         </mxCell>
         <mxCell id="M96NEgAKH5dN4HArhEmM-44" value="VIGILANTES LINK" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#6c8ebf;fillColor=#dae8fc;fontSize=20;" vertex="1" parent="1">
