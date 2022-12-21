@@ -13,7 +13,7 @@
     {% endif %}
     <p>APPREHENDED BY: <a class = show_links href="/vigilantes/{{ patient.vigilante.id }}"> {{patient.vigilante.name}} </a></p>
 
-    <p>TREATMENT BY: DR. <a class = show_links href="/doctors/{{ patient.doctor.id }}"> {{patient.doctor.name}} </a></p>
+    <p>TREATMENT BY: <a class = show_links href="/doctors/{{ patient.doctor.id }}">DR. {{patient.doctor.name}} </a></p>
     <p>TREATMENT NOTES:</p>
     
     <p class = "notes">{{patient.treatment_notes}}</p>
