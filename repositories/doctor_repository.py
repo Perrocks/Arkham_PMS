@@ -4,6 +4,7 @@ from models.doctor import Doctor
 from models.patient import Patient
 
 # Save new doctor to the database
+# ---------------------------------
 def save(doctor):
     sql = "INSERT INTO doctors(name) VALUES (%s) RETURNING id"
     values = [doctor.name]
@@ -13,6 +14,7 @@ def save(doctor):
 
 
 # Select all saved doctors from database and return
+# ---------------------------------
 def select_all():
     doctors = []
 
@@ -26,6 +28,7 @@ def select_all():
 
 
 # Select one doctors from the database and return
+# ---------------------------------
 def select(id):
     doctor = None
 
@@ -38,11 +41,22 @@ def select(id):
     return doctor
 
 # Delete all from doctors table
+# ---------------------------------
 def delete_all():
     sql = "DELETE FROM doctors"
     run_sql(sql)
 
+# Delete one doctor from table
+# ---------------------------------
 def delete(id):
     sql = "DELETE  FROM doctors WHERE id = %s"
     values = [id]
     run_sql(sql, values)
+
+# Update the details of selected doctor
+# ---------------------------------
+def update(doctor):
+    sql = "UPDATE doctors SET name = %s WHERE id = %s"
+
+    values = [doctor.name, doctor.id]
+    run_sql( sql, values )

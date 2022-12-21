@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="edit">
+<br>
+<h1>EDIT DOCTOR</h1>
+
+<form action="/doctors/{{doctor.id}}" method="post">
+
+    <label for="name">NAME</label><br>
+    <input class = "input"  type="text" name="name" id="name" value="{{doctor.name}}"required><br>
+    <input class="button" type="submit" value="UPDATE MEDICAL PROFESSIONAL"><br>
+</form>
+</div>
+{% endblock %}

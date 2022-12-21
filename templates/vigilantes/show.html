@@ -5,15 +5,20 @@
     <br>
     <h1> {{vigilante.name}} </h1>
 
-    <h3>Apprehended:</h3>
+    <h3>APPREHENDED:</h3>
 
     <ul>
         {% for patient in patients %}
 
-        <li><a class = show_links href="/patients/{{ patient.id }}"> {{patient.alias}} </a></li>
+        <li><a class=show_links href="/patients/{{ patient.id }}"> {{patient.alias}} </a></li>
 
         {% endfor %}
     </ul>
+
+    <form action="/vigilantes/{{vigilante.id}}/edit" method="GET">
+        <input class="button" type="submit" value="UPDATE OFFICER/VIGILANTE">
+    </form>
+
 
     <form action="/vigilantes/{{vigilante.id}}/delete" method="POST">
         <input class="button" type="submit" value="REMOVE OFFICER/VIGILANTE">

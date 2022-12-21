@@ -8,6 +8,7 @@ import repositories.vigilante_repository as vigilante_repository
 import repositories.doctor_repository as doctor_repository
 
 # Save new patient to the database
+# ---------------------------------
 def save(patient):
     sql = "INSERT INTO patients(alias, name, age, enhanced, vigilante_id, doctor_id, treatment_notes) VALUES (%s, %s, %s, %s, %s, %s, %s) RETURNING id"
     
@@ -19,6 +20,7 @@ def save(patient):
 
 
 # Select all saved patients from database and return
+# ---------------------------------
 def select_all():
     patients = []
 
@@ -36,6 +38,7 @@ def select_all():
 
 
 # Select one patient from the database and return
+# ---------------------------------
 def select(id):
     patient = None
 
@@ -53,10 +56,13 @@ def select(id):
     return patient
 
 # Delete all from patients table
+# ---------------------------------
 def delete_all():
     sql = "DELETE  FROM patients"
     run_sql(sql)
 
+# Displays a list of patients assigned to a selected vigilante
+# ---------------------------------
 def patients_by_vigilante(vigilante):
     patients = []
 
@@ -70,6 +76,8 @@ def patients_by_vigilante(vigilante):
             patients.append(patient)
     return patients 
 
+# Displays a list of patients assigned to a selected doctor
+# ---------------------------------
 def patients_by_doctor(doctor):
     patients = []
 
@@ -83,11 +91,15 @@ def patients_by_doctor(doctor):
             patients.append(patient)
     return patients
 
+# Delete one patient from table
+# ---------------------------------
 def delete(id):
     sql = "DELETE  FROM patients WHERE id = %s"
     values = [id]
     run_sql(sql, values)
 
+# Update the details of selected patient
+# ---------------------------------
 def update(patient):
     sql = "UPDATE patients SET (alias, name, age, enhanced, vigilante_id, doctor_id, treatment_notes) =(%s, %s, %s, %s, %s, %s, %s) WHERE id = %s"
 

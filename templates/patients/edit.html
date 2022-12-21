@@ -6,6 +6,7 @@
 <h1>EDIT PATIENT</h1>
 
 <form action="/patients/{{patient.id}}" method="post">
+    
     <label for="alias">ALIAS</label><br>
     <input class = "input"  type="text" name="alias" id="alias" value="{{patient.alias}}" required><br>
 
@@ -16,18 +17,18 @@
     <input class = "input"  type="text" name="age" id="age" value="{{patient.age}}"required><br>
 
     <label for="enhanced">ENHANCED:</label>
-    <input type="checkbox" id="enhanced" name="enhanced" {% if patient.enhanced == True%} checked = True{%endif%}><br>
+    <input class="checkbox" type="checkbox" id="enhanced" name="enhanced" {% if patient.enhanced == True%} checked = True{%endif%}><br>
   
 
     <label for="vigilante">APPREHENDED BY:</label><br>
-    <select name="vigilante_id" id="vigilante">
+    <select class = "non_text_input" name="vigilante_id" id="vigilante">
         {% for vigilante in vigilantes %}
         <option value="{{ vigilante.id }}">{{ vigilante.name }}</option>
         {% endfor %}
     </select><br>
 
     <label for="doctor">TREATED BY:</label><br>
-    <select name="doctor_id" id="doctor">
+    <select class = "non_text_input" name="doctor_id" id="doctor">
         {% for doctor in doctors %}
         <option value="{{ doctor.id }}">{{ doctor.name }}</option>
         {% endfor %}
@@ -35,7 +36,8 @@
 
     <label for="treatment_notes">TREATMENT NOTES</label><br>
 
-    <textarea class = "input"  name="treatment_notes" id="treatment_notes" rows="5" cols="30" autofocus>{{patient.treatment_notes}}</textarea><br>
+    <textarea class = "textarea"  name="treatment_notes" id="treatment_notes" rows="5" cols="30" autofocus>{{patient.treatment_notes}}</textarea><br>
+    
     <input class="button" type="submit" value="UPDATE PATIENT"><br>
 </form>
 </div>

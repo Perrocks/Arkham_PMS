@@ -43,8 +43,16 @@ def delete_all():
     sql = "DELETE FROM vigilantes"
     run_sql(sql)
 
+# Delete one vigilante from table
 def delete(id):
     sql = "DELETE  FROM vigilantes WHERE id = %s"
     values = [id]
     run_sql(sql, values)
 
+# Update the details of selected vigilante
+def update(vigilante):
+    sql = "UPDATE vigilantes SET (name, type) =(%s, %s) WHERE id = %s"
+
+    values = [vigilante.name, vigilante.type, vigilante.id]
+    
+    run_sql( sql, values )

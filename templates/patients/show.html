@@ -4,17 +4,17 @@
 <div class="show">
     <br>
     <h1>PATIENT DETAILS</h1>    
-    <p>Alias / Name: {{ patient.alias }} / {{ patient.name }} </p>
-    <p>Age: {{patient.age}}</p>
+    <p>ALIAS / NAME: {{ patient.alias }} / {{ patient.name }} </p>
+    <p>AGE: {{patient.age}}</p>
     {% if patient.enhanced %} 
-        <p>Enhanced: Yes</p>
+        <p>ENHANCED: YES</p>
     {% else %} 
-        <p>Enhanced: No</p>
+        <p>ENHANCED: NO</p>
     {% endif %}
-    <p>Apprehended by: <a class = show_links href="/vigilantes/{{ patient.vigilante.id }}"> {{patient.vigilante.name}} </a></p>
-    
-    <p>Treatment by: <a class = show_links href="/doctors/{{ patient.doctor.id }}"> {{patient.doctor.name}} </a></p>
-    <p>Treatment notes:</p>
+    <p>APPREHENDED BY: <a class = show_links href="/vigilantes/{{ patient.vigilante.id }}"> {{patient.vigilante.name}} </a></p>
+
+    <p>TREATMENT BY: DR. <a class = show_links href="/doctors/{{ patient.doctor.id }}"> {{patient.doctor.name}} </a></p>
+    <p>TREATMENT NOTES:</p>
     
     <p class = "notes">{{patient.treatment_notes}}</p>
     

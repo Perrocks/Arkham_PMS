@@ -2,21 +2,25 @@
 
 {% block content %}
 <div class="show">
-<br>
-<h1> {{doctor.name}} </h1>
+    <br>
+    <h1>DR. {{doctor.name}} </h1>
 
-<h3>Currently treating:</h3>
+    <h3>Currently treating:</h3>
 
-<ul>
-    {% for patient in patients %}
+    <ul>
+        {% for patient in patients %}
 
-    <li><a class = show_links href="/patients/{{ patient.id }}"> {{patient.alias}} </a></li>
+        <li><a class=show_links href="/patients/{{ patient.id }}"> {{patient.alias}} </a></li>
 
-    {% endfor %}
-</ul>
+        {% endfor %}
+    </ul>
 
-<form action="/doctors/{{doctor.id}}/delete" method="POST">
-    <input class="button" type="submit" value="REMOVE DOCTOR">
-</form>
+    <form action="/doctors/{{doctor.id}}/edit" method="GET">
+        <input class="button" type="submit" value="UPDATE MEDICAL PROFESSIONAL">
+    </form>
+
+    <form action="/doctors/{{doctor.id}}/delete" method="POST">
+        <input class="button" type="submit" value="REMOVE DOCTOR">
+    </form>
 </div>
 {% endblock %}
